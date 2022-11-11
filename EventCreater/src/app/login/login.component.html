@@ -1,0 +1,47 @@
+<div class="main">
+  <form [formGroup]="loginForm">
+    <div class="login_box">
+      <div class="input-box">
+        <div class="grid email">
+          <input
+            type="email"
+            class="email"
+            placeholder="E-mail"
+            formControlName="email"
+          /><br />
+          <div
+            class="valid"
+            *ngIf="
+              this.loginForm.get('email')?.errors &&
+              this.loginForm.get('email')?.touched
+            "
+          >
+            Email is Required. Must be a valid Email.
+          </div>
+        </div>
+        <div class="grid pswd">
+          <input
+            type="password"
+            class="password"
+            placeholder="Password"
+            formControlName="password"
+          /><br />
+          <div
+            class="valid"
+            *ngIf="
+              this.loginForm.get('password')?.errors &&
+              this.loginForm.get('password')?.touched
+            "
+          >
+            Password Must contain 8 characters with atleast a capital & small
+            letter , a number , a special character
+          </div>
+        </div>
+      </div>
+      <div class="btn">
+        <button class="sign_up" (click)="login()">Login</button>
+      </div>
+      <span>Don't have an account? <a href="">Sign Up</a></span>
+    </div>
+  </form>
+</div>

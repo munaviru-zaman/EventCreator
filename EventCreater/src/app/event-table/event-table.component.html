@@ -1,0 +1,49 @@
+<div class="main" [ngClass]="currentUser ? 'style' : ''">
+  <div class="navbar">
+    <h2>Events</h2>
+    <button (click)="createEvent()">Create Event</button>
+  </div>
+
+  <div class="table">
+    <table class="tablefont">
+      <thead>
+        <tr>
+          <th>Event Date</th>
+          <th>Event Name</th>
+          <th>Priority</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody *ngFor="let event of eventsArray">
+        <tr>
+          <td>{{ event.event_date | date: "dd MMM yyyy" }}</td>
+          <td>{{ event.event_name }}</td>
+          <td>{{ event.priority }}</td>
+          <td class="btnrow">
+            <button
+              class="btn"
+              (click)="deleteDiv(event.event_name, event.event_date)"
+            >
+              <i class="fa-solid fa-trash-can"></i>
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<div class="card" *ngIf="currentUser">
+  <div class="eventDelete">
+    <span>Delete Event</span>
+    <div class="eventDetails">
+      <input type="text" [(ngModel)]="eventname" readonly /> <br />
+      <input type="text" [(ngModel)]="eventdate" readonly /> <br />
+      <input type="text" [(ngModel)]="userid" readonly /> <br />
+      <input type="text" [(ngModel)]="priority" readonly /> <br />
+    </div>
+    <div class="btn">
+      <button (click)="eventdelete()">Delete Event</button>
+      <button (click)="cancelDiv()">Cancel</button>
+    </div>
+  </div>
+</div>

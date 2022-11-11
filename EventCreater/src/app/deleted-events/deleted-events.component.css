@@ -1,0 +1,105 @@
+.main {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #ff8370;
+  height: 100vh;
+  overflow: hidden;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 15vh;
+  /* background-color: #ff8370; */
+  padding: 1rem 4rem;
+}
+
+.navbar h2 {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 800;
+  font-size: 3rem;
+  color: white;
+  filter: drop-shadow(-3px -3px 2px rgba(255, 255, 255, 0.2))
+    drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.3))
+    drop-shadow(15px 15px 15px rgba(0, 0, 0, 0.3));
+}
+.navbar button {
+  padding: 15px 2rem;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  background-color: #ff8370;
+  font-family: "Manrope", sans-serif;
+  font-weight: 800;
+  color: white;
+  font-size: 18px;
+  transition: all 1s;
+}
+
+.navbar button:hover {
+  box-shadow: -3px -3px 2px rgba(255, 255, 255, 0.1),
+    5px 5px 5px rgba(0, 0, 0, 0.2), 20px 20px 35px rgba(0, 0, 0, 0.1);
+}
+
+.table {
+  padding: 1rem 4rem;
+  overflow-y: scroll;
+  height: calc(100vh - 15vh);
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+table {
+  width: 100%;
+  text-align: center;
+  table-layout: fixed;
+  border-collapse: separate;
+  border-spacing: 0 20px;
+}
+
+table thead {
+  width: 100%;
+  overflow: hidden;
+}
+table tbody {
+  overflow: hidden;
+  width: 100%;
+}
+
+thead tr {
+  border-radius: 10px;
+  box-shadow: -15px -15px 15px rgba(255, 255, 255, 0.08),
+    15px 15px 15px rgba(0, 0, 0, 0.1);
+  transition: all 1s;
+}
+
+tbody tr {
+  border-radius: 10px;
+  transition: all 0.5s;
+}
+
+tbody tr:hover {
+  border-radius: 10px;
+  /* box-shadow: -15px -15px 15px rgba(255, 255, 255, 0.08),
+    15px 15px 15px rgba(0, 0, 0, 0.1); */
+  box-shadow: -15px -15px 15px rgba(255, 255, 255, 0.08),
+    15px 15px 15px rgba(0, 0, 0, 0.1);
+}
+
+th {
+  font-size: 1rem;
+  padding: 1rem;
+  font-family: "Manrope", sans-serif;
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.484);
+}
+td {
+  font-size: 13px;
+  padding: 1rem;
+  font-family: "Manrope", sans-serif;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.515);
+}

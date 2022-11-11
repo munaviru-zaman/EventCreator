@@ -1,0 +1,67 @@
+<div class="main" [ngClass]="currentUser ? 'style' : ''">
+  <div class="navbar">
+    <span class="header">Event Creator</span>
+    <div class="nav-links">
+      <a href="events">Events</a><a href="deletedevents">Deleted Events</a>
+    </div>
+    <div class="delbtn">
+      <Button (click)="logout()">Log Out</Button>
+      <!-- <button>Delete Account</button> -->
+    </div>
+  </div>
+  <div class="body">
+    <button (click)="addEvent()">Add Event</button>
+  </div>
+</div>
+<div class="card" *ngIf="currentUser">
+  <div class="eventCreate">
+    <span>Create Event</span>
+    <div class="eventDetails">
+      <input
+        class="name form-control"
+        type="text"
+        placeholder="Event Name"
+        [(ngModel)]="e_name"
+        required
+      />
+      <!-- <div *ngIf="e_name.errors?.['required']">Name is required.</div> -->
+
+      <input class="date" type="date" [(ngModel)]="e_date" />
+      <input class="id" type="text" value="{{ user_id }}" readonly />
+      <span class="label">Priority : </span>
+      <div class="eventPriority">
+        <div class="radioGroup">
+          <input
+            id="high"
+            type="radio"
+            name="priority"
+            value="High"
+            [(ngModel)]="priority"
+            checked:true
+          />
+          <label for="high">High</label>
+          <input
+            id="medium"
+            type="radio"
+            name="priority"
+            value="Medium"
+            [(ngModel)]="priority"
+            checked:true
+          /><label for="medium">Medium</label>
+          <input
+            id="low"
+            type="radio"
+            name="priority"
+            value="Low"
+            [(ngModel)]="priority"
+            checked:true
+          /><label for="low">Low</label>
+        </div>
+      </div>
+    </div>
+    <div class="btn">
+      <button (click)="eventcreate()">Create Event</button>
+      <button (click)="eventcancel()">Cancel</button>
+    </div>
+  </div>
+</div>

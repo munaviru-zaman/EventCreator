@@ -1,0 +1,116 @@
+.main {
+  height: 100vh;
+  box-sizing: border-box;
+}
+.main .login_box {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  min-height: 50vh;
+  width: 60vh;
+  min-width: 40vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.login_box .input-box {
+  width: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.input-box .grid {
+  width: 60vh;
+  height: 4rem;
+  text-align: center;
+}
+.grid input {
+  text-align: center;
+  height: 2.6rem;
+  width: 42vh;
+  font-size: 15px;
+  background-color: #ff8370;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  transition: box-shadow 0.5s;
+  color: white;
+}
+
+.grid input::placeholder {
+  font-size: 13px;
+  color: white;
+  font-family: "Manrope", sans-serif;
+  font-weight: 500;
+}
+
+.grid input:hover {
+  background: transparent;
+  border: 1px solid #ff8370;
+  color: #ff8370;
+}
+.grid input:hover::placeholder {
+  color: #ff8370;
+}
+.grid input:focus {
+  background: transparent;
+  border: 1px solid #ff8370;
+  color: #ff8370;
+}
+.grid input:focus::placeholder {
+  color: #ff8370;
+}
+
+.grid .valid {
+  font-size: 6px;
+  color: red;
+  margin: 2px;
+  font-family: "Manrope", sans-serif;
+  font-weight: 400;
+}
+
+.sign_up_box .btn {
+  margin: 1rem 0;
+  width: 60vh;
+  text-align: center;
+}
+.btn button {
+  height: 2.6rem;
+  width: 42vh;
+  padding: 0 15px;
+  border-radius: 10px;
+  background: transparent;
+  border: 1px solid #ff8370;
+  font-size: 15px;
+  font-family: "Manrope", sans-serif;
+  font-weight: 800;
+  color: #ff8370;
+}
+
+.btn button:hover {
+  background-color: #ff8370;
+  color: white;
+}
+
+.login_box span {
+  margin: 1rem;
+  font-size: 12px;
+  font-family: "Manrope", sans-serif;
+  font-weight: 600;
+  color: #000000;
+}
+
+a {
+  font-family: "Manrope", sans-serif;
+  font-weight: 600;
+  color: #ff8370;
+}
+a:hover {
+  font-family: "Manrope", sans-serif;
+  font-weight: 600;
+  color: #ec725f;
+}

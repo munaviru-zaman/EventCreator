@@ -1,0 +1,22 @@
+<div class="main">
+  <div class="navbar">
+    <h2>Deleted Events</h2>
+    <button (click)="createEvent()">Create Event</button>
+  </div>
+  <div class="table">
+    <table>
+      <thead>
+        <tr>
+          <th>Event Date</th>
+          <th>Event Name</th>
+        </tr>
+      </thead>
+      <tbody *ngFor="let event of deletedArray">
+        <tr>
+          <td>{{ event.event_date | date: "dd MMM yyyy" }}</td>
+          <td>{{ event.event_name }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

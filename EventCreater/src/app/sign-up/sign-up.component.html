@@ -1,0 +1,82 @@
+<div class="main">
+  <form [formGroup]="signupForm">
+    <div class="sign_up_box">
+      <div class="input-box">
+        <div class="userid grid">
+          <input
+            type="text"
+            class="userId"
+            placeholder="User ID"
+            formControlName="userid"
+          /><br />
+          <div
+            class="valid"
+            *ngIf="
+              this.signupForm.get('userid')?.errors &&
+              this.signupForm.get('userid')?.touched
+            "
+          >
+            User ID is required. Must be a number.
+          </div>
+        </div>
+        <div class="dob grid">
+          <input
+            type="date"
+            class="DOB"
+            placeholder="Date of Birth"
+            formControlName="dob"
+          /><br />
+          <div
+            class="valid"
+            *ngIf="
+              this.signupForm.get('dob')?.errors &&
+              this.signupForm.get('dob')?.touched
+            "
+          >
+            Date of Birth is required. Must be in DD-MM-YYYY format.
+          </div>
+        </div>
+        <div class="email grid">
+          <input
+            type="email"
+            class="email"
+            placeholder="E-mail"
+            formControlName="email"
+          /><br />
+          <div
+            class="valid"
+            *ngIf="
+              this.signupForm.get('email')?.errors &&
+              this.signupForm.get('email')?.touched
+            "
+          >
+            Email is Required. Must be a valid Email.
+          </div>
+        </div>
+        <div class="pswd grid">
+          <input
+            type="password"
+            class="password"
+            placeholder="Password"
+            formControlName="password"
+          /><br />
+          <div
+            class="valid"
+            *ngIf="
+              this.signupForm.get('password')?.errors &&
+              this.signupForm.get('password')?.touched
+            "
+          >
+            Password Must contain 8 characters with atleast a capital & small
+            letter , a number , a special character
+          </div>
+        </div>
+      </div>
+
+      <div class="btn grid">
+        <button class="sign_up" (click)="signUp()">Sign Up</button>
+      </div>
+      <span>Already a user? <a href="login">Login</a></span>
+    </div>
+  </form>
+</div>
